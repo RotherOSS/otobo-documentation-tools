@@ -1,0 +1,12 @@
+services:
+  sphinx-latex:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: otobo_doc_helper:latest
+    container_name: otobo_doc_helper
+    volumes:
+      - ../content:/usr/OTOBODocHelper/content
+      - ../build:/usr/OTOBODocHelper/build
+      - ../conf:/usr/OTOBODocHelper/conf
+    entrypoint: ["tail", "-f", "/dev/null"]
