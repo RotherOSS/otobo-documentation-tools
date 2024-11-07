@@ -22,7 +22,7 @@ RUN apk add py3-sphinx
 RUN echo "Installing make..."
 RUN apk add make
 
-COPY build_documentation.sh /usr/OTOBODocHelper/build_documentation.sh
+COPY scripts/build_documentation.sh /usr/OTOBODocHelper/build_documentation.sh
 
 # Set the working directory
 WORKDIR /usr/OTOBODocHelper
