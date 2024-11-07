@@ -2,7 +2,7 @@ services:
   sphinx-latex:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: DocumentationTest.dockerfile
     image: otobo_doc_helper:latest
     container_name: otobo_doc_helper
     volumes:
