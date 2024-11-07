@@ -1,9 +1,9 @@
 services:
-  doctools:
+  otobo_doc_helper:
+    tty: true
     image: rotheross/documentationtools:latest
     container_name: otobo_doc_helper
     volumes:
-      - ./content:/usr/OTOBODocHelper/content
-      - ./build:/usr/OTOBODocHelper/build
-      - ./conf:/usr/OTOBODocHelper/conf
-#    entrypoint: ["tail", "-f", "/dev/null"]
+      - ../content:/usr/OTOBODocHelper/content
+      - ../build:/usr/OTOBODocHelper/build
+      - ../conf:/usr/OTOBODocHelper/conf
