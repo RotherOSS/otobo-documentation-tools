@@ -3,14 +3,24 @@
 # Use alpine as the base image
 FROM alpine:latest
 
-# Copy the setup script to /bin/ in the container
-COPY setup.sh /bin/
+# Update package list and upgrade existing packages
+RUN apk update && apk upgrade
 
-# Make sure the script is executable
-RUN chmod +x /bin/setup.sh
+# Install LaTeX (TeX Live)
+RUN echo "Installing LaTeX (TeX Live)..."
+RUN apk add texlive-full
 
-RUN /bin/setup.sh
-RUN rm /bin/setup.sh
+#Install Python and pip (if not already installed)
+RUN echo "Installing Python3..."
+RUN apk add python3
+
+# Install Sphinx and additional dependencies
+RUN echo "Installing Sphinx and necessary Python packages..."
+RUN apk add py3-sphinx
+
+# Install other useful tools (e.g., make, if not already installed)
+RUN echo "Installing make..."
+RUN apk add make
 
 COPY build_documentation.sh /usr/OTOBODocHelper/build_documentation.sh
 
