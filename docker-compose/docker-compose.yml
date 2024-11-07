@@ -4,9 +4,9 @@ services:
       context: ../
       dockerfile: DocumentationTest.dockerfile
     image: rotheross/documentationtools:latest
-#    container_name: otobo_doc_helper
+    container_name: otobo_doc_helper
     volumes:
       - ./content:/usr/OTOBODocHelper/content
       - ./build:/usr/OTOBODocHelper/build
       - ./conf:/usr/OTOBODocHelper/conf
-    entrypoint: ["tail", "-f", "/dev/null"]
+#    entrypoint: ["tail", "-f", "/dev/null"]

@@ -2,4 +2,4 @@
 
 cd docker || exit 1
 docker compose up -d --remove-orphans
-docker exec -ti otobo_doc_helper /bin/sh
+docker exec -it otobo_doc_helper /bin/sh
