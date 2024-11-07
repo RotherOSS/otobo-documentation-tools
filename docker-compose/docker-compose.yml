@@ -1,8 +1,5 @@
 services:
   doctools:
-    build:
-      context: ../
-      dockerfile: DocumentationTest.dockerfile
     image: rotheross/documentationtools:latest
     container_name: otobo_doc_helper
     volumes:
