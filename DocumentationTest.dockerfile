@@ -29,4 +29,4 @@ WORKDIR /usr/OTOBODocHelper
 
 # Set the entrypoint to run the script when the container starts
 # force container to stay running
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+#ENTRYPOINT ["tail", "-f", "/dev/null"]
