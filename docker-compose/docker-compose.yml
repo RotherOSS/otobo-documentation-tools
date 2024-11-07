@@ -1,12 +1,12 @@
 services:
-  sphinx-latex:
+  doctools:
     build:
-      context: .
-      dockerfile: ../DocumentationTest.dockerfile
-    image: otobo_doc_helper:latest
-    container_name: otobo_doc_helper
+      context: ../
+      dockerfile: DocumentationTest.dockerfile
+    image: rotheross/documentationtools:latest
+#    container_name: otobo_doc_helper
     volumes:
-      - ../content:/usr/OTOBODocHelper/content
-      - ../build:/usr/OTOBODocHelper/build
-      - ../conf:/usr/OTOBODocHelper/conf
+      - ./content:/usr/OTOBODocHelper/content
+      - ./build:/usr/OTOBODocHelper/build
+      - ./conf:/usr/OTOBODocHelper/conf
     entrypoint: ["tail", "-f", "/dev/null"]
