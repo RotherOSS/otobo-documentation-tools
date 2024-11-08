@@ -1,7 +1,7 @@
 services:
   otobo_doc_helper:
     tty: true
-    image: rotheross/otobo-documentation-test:latest
+    image: rotheross/otobo-documentation-tools:latest
     container_name: otobo_doc_helper
     volumes:
       - ../content:/usr/OTOBODocHelper/content
