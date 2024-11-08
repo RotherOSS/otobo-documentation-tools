@@ -1,7 +1,7 @@
 #!/bin/sh
 
-cd ../conf || exit
+cd ./conf || exit
 
 make latexpdf
 
-find ../build/pdf -name \*.pdf -exec cp {} ../ \;
+find ./build/pdf -name \*.pdf -exec cp {} ../ \;
