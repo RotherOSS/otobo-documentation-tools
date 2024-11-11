@@ -1,11 +1,17 @@
-## README
+# OTOBO Documentation Tools
 
-set up the container by calling `build.sh` (this will take some time, but is only necessary once)
+## How To Use
 
-put your documentation into the `contents` folder
+### Write The Documentation
 
-call `start.sh` to boot up the docker container and start an interactive shell in the container
+You can find a documentation template in the `contents` folder of this repository. It contains instructions on how to write OTOBO Documentation.
 
-in the container, call `build_documentation.sh`
+### Build The Documentation
 
-the resulting pdf can be found in the working directory of the container as well as the `build/pdf` folder
+- replace the documentation template in the `contents` folder with your documentation
+
+- call `scripts/start.sh` to boot up the docker container and start an interactive shell in the container
+
+- in the container, call `scripts/build_documentation.sh`
+
+- the resulting pdf can be found in the `build/pdf` folder
