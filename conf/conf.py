@@ -37,3 +37,9 @@ html_static_path = ['./static']
 html_output_dir = '../build/html'
 
 latex_output_dir = '../build/latex'
+
+rst_prolog = """
+.. |doc-vendor| replace::  Rother OSS GmbH
+.. |doc-version| replace:: X.X.X.X
+.. |doc-datestamp| replace:: YYYY-MM-DD
+"""
