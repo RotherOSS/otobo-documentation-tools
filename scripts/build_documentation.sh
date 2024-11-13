@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd ../conf || exit
+cd ./conf || exit
 
 make latexpdf
