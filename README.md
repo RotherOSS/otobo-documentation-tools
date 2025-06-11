@@ -28,6 +28,6 @@ You can find a documentation template in the `contents` folder of this repositor
 
 - replace the documentation template in the `contents` folder with your documentation
 
-- in the container, call `scripts/build_documentation.sh`
+- in the container, call `build_documentation.sh`
 
 - the resulting pdf can be found in the `build/pdf` folder
